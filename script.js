@@ -80,6 +80,12 @@ const dropzone = document.getElementById("dropzone");
 const fileInput = document.getElementById("file-input");
 const toastContainer = document.getElementById("toast-container");
 
+// Drawer Elements
+const btnToggleUpload = document.getElementById("btn-toggle-upload");
+const uploadDrawer = document.getElementById("upload-drawer");
+const btnToggleSettings = document.getElementById("btn-toggle-settings");
+const settingsDrawer = document.getElementById("settings-drawer");
+
 // Modal Elements
 const modalOverlay = document.getElementById("modal-overlay");
 const modalClose = document.getElementById("modal-close");
@@ -202,6 +208,17 @@ function initApp() {
         if (files.length > 0) {
             processFontFiles(files);
         }
+    });
+
+    // Collapsible Drawers
+    btnToggleUpload.addEventListener("click", () => {
+        const isActive = uploadDrawer.classList.toggle("active");
+        btnToggleUpload.classList.toggle("active", isActive);
+    });
+
+    btnToggleSettings.addEventListener("click", () => {
+        const isActive = settingsDrawer.classList.toggle("active");
+        btnToggleSettings.classList.toggle("active", isActive);
     });
 
     // Modal Close
