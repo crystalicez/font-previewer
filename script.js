@@ -424,12 +424,20 @@ function processFontFiles(files) {
                 document.fonts.add(loadedFace);
                 
                 // Match this uploaded font against our list
-                // Compare by stripping symbols and spaces
-                const compareString = cleanBase.toLowerCase().replace(/[^a-z0-9]/g, '');
+                // Compare using a smart normalizer that ignores minor spelling differences and common suffixes
+                const normalize = (str) => {
+                    return str.toLowerCase()
+                              .replace(/[^a-z0-9]/g, '')
+                              .replace(/calligraphy/g, 'caligraphy') // handles winter caligraphy vs winter calligraphy
+                              .replace(/(static|regular|pro|10|psk|new)$/g, ''); // strips common suffixes
+                };
+                
+                const compareString = normalize(cleanBase);
                 
                 let matchedFont = fonts.find(f => {
-                    const fontCompare = f.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-                    return fontCompare === compareString || f.id.replace(/-/g, '') === compareString;
+                    const fontCompareName = normalize(f.name);
+                    const fontCompareId = normalize(f.id);
+                    return fontCompareName === compareString || fontCompareId === compareString;
                 });
 
                 if (matchedFont) {
