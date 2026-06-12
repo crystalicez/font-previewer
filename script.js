@@ -297,11 +297,22 @@ function resetControls() {
 function checkLocalFontsStatus() {
     fonts.forEach(font => {
         if (font.category === 'Local') {
-            // Check only the specific custom font family (the first name in the family string)
             const specificFamily = font.id; // abyssopelagic, antro-vectra, etc.
             
-            document.fonts.load(`12px ${specificFamily}`).then(() => {
-                if (document.fonts.check(`12px ${specificFamily}`)) {
+            document.fonts.load(`12px ${specificFamily}`, 'a').then(() => {
+                const isLoaded = () => {
+                    if (document.fonts.check(`12px ${specificFamily}`, 'a')) {
+                        return true;
+                    }
+                    const faces = Array.from(document.fonts).filter(face => {
+                        const normalizedFace = face.family.replace(/['"]/g, '').toLowerCase();
+                        const normalizedSpec = specificFamily.toLowerCase();
+                        return normalizedFace === normalizedSpec;
+                    });
+                    return faces.length > 0 && faces.some(face => face.status === 'loaded');
+                };
+
+                if (isLoaded()) {
                     font.status = 'Loaded (Local)';
                     updateCardBadge(font.id, 'Loaded (Local)', 'badge-local');
                 } else {
