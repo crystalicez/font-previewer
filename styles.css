@@ -46,8 +46,7 @@
     font-family: 'abyssopelagic';
     src: local('Abyssopelagic'),
          local('abyssopelagic'),
-         url('/fonts/abyssopelagic.otf') format('opentype'),
-         url('/fonts/abyssopelagic.ttf') format('truetype');
+         url('./fonts/abyssopelagic.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -57,10 +56,8 @@
     font-family: 'antro-vectra';
     src: local('Antro Vectra'),
          local('antro-vectra'),
-         local('AntroVectra'),
-         url('/fonts/antro_vectra.otf') format('opentype'),
-         url('/fonts/antro_vectra.ttf') format('truetype'),
-         url('/fonts/Antro_Vectra.otf') format('opentype');
+         local('AntroVera'),
+         url('./fonts/antro_vectra.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -70,8 +67,8 @@
     font-family: 'bridget-script';
     src: local('Bridget Script'),
          local('bridget-script'),
-         url('/fonts/bridget_script.ttf') format('truetype'),
-         url('/fonts/bridget script.ttf') format('truetype');
+         url('./fonts/bridget_script.ttf') format('truetype'),
+         url('./fonts/bridget script.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -81,9 +78,9 @@
     font-family: 'citadel-script';
     src: local('Citadel Script'),
          local('citadel-script'),
-         url('/fonts/citadel_script.ttf') format('truetype'),
-         url('/fonts/citadel_script.otf') format('opentype'),
-         url('/fonts/CitadelScriptStd.otf') format('opentype');
+         url('./fonts/citadel_script.ttf') format('truetype'),
+         url('./fonts/citadel_script.otf') format('opentype'),
+         url('./fonts/CitadelScriptStd.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -94,9 +91,9 @@
     src: local('Black Label Light'),
          local('black-label-light'),
          local('Black Label'),
-         url('/fonts/black_label_light.ttf') format('truetype'),
-         url('/fonts/blacklabel_light.ttf') format('truetype'),
-         url('/fonts/blacklabel-light.ttf') format('truetype');
+         url('./fonts/black_label_light.ttf') format('truetype'),
+         url('./fonts/blacklabel_light.ttf') format('truetype'),
+         url('./fonts/blacklabel-light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -107,20 +104,8 @@
     src: local('Code Saver Regular'),
          local('code-saver-regular'),
          local('Code Saver'),
-         url('/fonts/code_saver_regular.ttf') format('truetype'),
-         url('/fonts/codesaver_regular.otf') format('opentype'),
-         url('/fonts/codesaver-regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'th-sarabun-psk';
-    src: local('TH Sarabun PSK'),
-         local('TH Sarabun New'),
-         local('Sarabun'),
-         url('/fonts/th_sarabun_psk.ttf') format('truetype');
+         url('./fonts/codesaver_regular.otf') format('opentype'),
+         url('./fonts/codesaver-regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -130,8 +115,8 @@
     font-family: 'winter-calligraphy';
     src: local('Winter Calligraphy'),
          local('winter-calligraphy'),
-         url('/fonts/winter_calligraphy.ttf') format('truetype'),
-         url('/fonts/winter calligraphy.ttf') format('truetype');
+         url('./fonts/winter_calligraphy.ttf') format('truetype'),
+         url('./fonts/winter calligraphy.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -141,8 +126,8 @@
     font-family: 'valentine-love';
     src: local('Valentine Love'),
          local('valentine-love'),
-         url('/fonts/valentine_love.ttf') format('truetype'),
-         url('/fonts/valentine love.ttf') format('truetype');
+         url('./fonts/valentine_love.ttf') format('truetype'),
+         url('./fonts/valentine love.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -152,9 +137,7 @@
     font-family: 'chopin-script';
     src: local('Chopin Script'),
          local('chopin-script'),
-         url('/fonts/chopin_script.ttf') format('truetype'),
-         url('/fonts/chopinscript.otf') format('opentype'),
-         url('/fonts/ChopinScript.otf') format('opentype');
+         url('./fonts/chopinscript.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -164,7 +147,7 @@
     font-family: 'bickham-script-pro';
     src: local('Bickham Script Pro'),
          local('Bickham Script'),
-         url('/fonts/bickham_script_pro.ttf') format('truetype');
+         url('./fonts/bickham_script_pro.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -174,9 +157,8 @@
     font-family: 'dymaxian-script';
     src: local('Dymaxian Script'),
          local('dymaxian-script'),
-         url('/fonts/dymaxian_script.ttf') format('truetype'),
-         url('/fonts/dymaxian.ttf') format('truetype'),
-         url('/fonts/dymaxian_ttf.ttf') format('truetype');
+         url('./fonts/dymaxion.ttf') format('truetype'),
+         url('./fonts/dymaxion_ttf.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -187,10 +169,10 @@
     src: local('AT Citadel Script'),
          local('at-citadel-script'),
          local('at citadel script'),
-         url('/fonts/at_citadel_script.ttf') format('truetype'),
-         url('/fonts/at_citadel_script.otf') format('opentype'),
-         url('/fonts/citadel_script.ttf') format('truetype'),
-         url('/fonts/citadel_script.otf') format('opentype');
+         url('./fonts/at_citadel_script.ttf') format('truetype'),
+         url('./fonts/at_citadel_script.otf') format('opentype'),
+         url('./fonts/citadel_script.ttf') format('truetype'),
+         url('./fonts/citadel_script.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -200,8 +182,7 @@
     font-family: 'blacksword';
     src: local('Blacksword'),
          local('blacksword'),
-         url('/fonts/blacksword.otf') format('opentype'),
-         url('/fonts/blacksword.ttf') format('truetype');
+         url('./fonts/blacksword.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -211,7 +192,8 @@
     font-family: 'abbeyline';
     src: local('Abbeyline'),
          local('abbeyline'),
-         url('/fonts/abbeyline.ttf') format('truetype');
+         local('Abbey Line'),
+         url('./fonts/abbeyline.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
