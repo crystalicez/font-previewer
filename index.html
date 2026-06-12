@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Font Previewer</title>
+    <!-- Import Google Fonts for UI styling and selected web-ready fonts + high-fidelity fallbacks -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Athiti:wght@300;400;500;600;700&family=Charmonman:wght@400;700&family=Playball&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Syncopate:wght@400;700&family=Montserrat:wght@100;200;300;400&family=Mrs+Saint+Delafield&family=Herr+Von+Muellerhoff&family=Great+Vibes&family=Sacramento&family=Italianno&family=Oswald:wght@200;300;400&family=Source+Code+Pro:wght@200;300;400&family=Rochester&family=Monsieur+La+Doulaise&family=Pacifico&family=Satisfy&family=Pinyon+Script&family=Zeyada&family=Forum&family=Cinzel&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome icons via cdnjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Application Header -->
+        <header>
+            <div class="logo-section">
+                <h1>Font Preview Studio</h1>
+                <p>เปรียบเทียบ ทดสอบ และค้นพบฟอนต์ที่ดีที่สุดสำหรับโครงการของคุณ</p>
+            </div>
+            
+            <!-- Drag and Drop Zone -->
+            <div class="dropzone-container">
+                <div class="dropzone" id="dropzone">
+                    <input type="file" id="file-input" multiple accept=".ttf,.otf,.woff,.woff2">
+                    <i class="fa-solid fa-cloud-arrow-up dropzone-icon"></i>
+                    <span class="dropzone-text">ลากและวางไฟล์ฟอนต์ที่นี่เพื่อทดสอบ</span>
+                    <span class="dropzone-subtext">รองรับรูปแบบ .ttf, .otf, .woff, .woff2</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Floating Controls Panel -->
+        <div class="control-panel">
+            <div class="control-row-main">
+                <div class="input-wrapper">
+                    <input type="text" id="preview-input" class="text-input" placeholder="พิมพ์ข้อความทดสอบที่นี่..." value="สะพานพระราม 8 ABC 123">
+                </div>
+                <button id="btn-reset" class="btn-reset">
+                    <i class="fa-solid fa-arrow-rotate-left"></i> รีเซ็ต
+                </button>
+            </div>
+            
+            <div class="control-row-sub">
+                <!-- Font Size -->
+                <div class="control-group">
+                    <label for="size-slider">ขนาด</label>
+                    <div class="slider-container">
+                        <input type="range" id="size-slider" min="12" max="120" value="32">
+                        <span class="slider-value" id="size-val">32px</span>
+                    </div>
+                </div>
+                
+                <!-- Letter Spacing -->
+                <div class="control-group">
+                    <label for="spacing-slider">ระยะบรรทัด</label>
+                    <div class="slider-container">
+                        <input type="range" id="spacing-slider" min="-5" max="20" value="0">
+                        <span class="slider-value" id="spacing-val">0px</span>
+                    </div>
+                </div>
+                
+                <!-- Font Weight & Style -->
+                <div class="control-group">
+                    <label>รูปแบบ</label>
+                    <div style="display: flex; gap: 0.35rem;">
+                        <button class="style-btn" id="btn-bold" title="ตัวหนา">B</button>
+                        <button class="style-btn" id="btn-italic" title="ตัวเอียง">I</button>
+                    </div>
+                </div>
+                
+                <!-- Alignment -->
+                <div class="control-group">
+                    <label>จัดวาง</label>
+                    <div class="align-group">
+                        <button class="align-btn active" data-align="left" title="ชิดซ้าย">
+                            <i class="fa-solid fa-align-left"></i>
+                        </button>
+                        <button class="align-btn" data-align="center" title="กึ่งกลาง">
+                            <i class="fa-solid fa-align-center"></i>
+                        </button>
+                        <button class="align-btn" data-align="right" title="ชิดขวา">
+                            <i class="fa-solid fa-align-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Preset Themes -->
+                <div class="control-group">
+                    <label>ธีมพื้นหลัง</label>
+                    <div class="theme-picker">
+                        <button class="theme-btn theme-dark active" data-bg="#121214" data-text="#ffffff" title="Dark"></button>
+                        <button class="theme-btn theme-light" data-bg="#f9fafb" data-text="#111827" title="Light"></button>
+                        <button class="theme-btn theme-cream" data-bg="#fdf6e3" data-text="#586e75" title="Solarized Cream"></button>
+                        <button class="theme-btn theme-neon" data-bg="#090e17" data-text="#a78bfa" title="Cyberpunk"></button>
+                    </div>
+                </div>
+                
+                <!-- Custom Color Inputs -->
+                <div class="control-group">
+                    <label>กำหนดสี</label>
+                    <div class="custom-colors">
+                        <div class="color-input-wrapper" title="สีตัวอักษร">
+                            <input type="color" id="color-text" value="#ffffff">
+                        </div>
+                        <div class="color-input-wrapper" title="สีพื้นหลัง">
+                            <input type="color" id="color-bg" value="#121214">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters & View Options Bar -->
+        <div class="filter-bar">
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="search-input" class="search-input" placeholder="ค้นหาฟอนต์ตามชื่อ...">
+            </div>
+            
+            <div class="filter-actions">
+                <span class="stat-counter" id="stat-counter">แสดงทั้งหมด 29 ฟอนต์</span>
+                
+                <div class="view-toggle">
+                    <button class="view-btn active" id="view-grid" title="มุมมองตาราง">
+                        <i class="fa-solid fa-grid-2"></i> ตาราง
+                    </button>
+                    <button class="view-btn" id="view-list" title="มุมมองรายการ">
+                        <i class="fa-solid fa-list"></i> รายการ
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fonts Preview Grid -->
+        <main class="font-grid" id="font-grid"></main>
+
+        <!-- Guide Footer Section -->
+        <footer class="guide-section">
+            <h3>คู่มือการตั้งค่าและการใช้งาน (Usage Guide)</h3>
+            <div class="guide-steps">
+                <div class="guide-step">
+                    <strong>1. การลากไฟล์ติดตั้งแบบ Real-time</strong>
+                    คุณสามารถลากไฟล์ฟอนต์สกุล <code>.ttf</code>, <code>.otf</code>, <code>.woff</code> หรือ <code>.woff2</code> จากในคอมพิวเตอร์ของคุณมาปล่อยที่แถบอัปโหลดด้านบนเพื่อเริ่มดูตัวอย่างได้ทันที
+                </div>
+                <div class="guide-step">
+                    <strong>2. โหลดอัตโนมัติจากเครื่อง/เซิร์ฟเวอร์</strong>
+                    หากคุณดาวน์โหลดฟอนต์ลงในโฟลเดอร์โครงการ สามารถคัดลอกไฟล์ฟอนต์ไปวางไว้ในโฟลเดอร์ <code>fonts/</code> ในเครื่องของคุณ และตั้งชื่อไฟล์ตามระบบแนะนำเพื่อให้ระบบโหลดอัตโนมัติ
+                </div>
+                <div class="guide-step">
+                    <strong>3. การส่งออกรูปภาพสำหรับออกแบบ</strong>
+                    ในฟอนต์แต่ละการ์ด คุณสามารถคลิกปุ่ม **Export PNG** ระบบจะใช้ HTML Canvas เพื่อแปลงตัวหนังสือพร้อมสไตล์ที่คุณกำหนดเป็นรูปภาพพื้นหลังโปร่งใสดาวน์โหลดลงเครื่องได้ทันที
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Detailed Font Modal Dialog -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-title-area">
+                    <h2 id="modal-font-name">Font Family Name</h2>
+                    <p id="modal-font-category">Category & Status</p>
+                </div>
+                <button class="modal-close" id="modal-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Playground Section -->
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fa-solid fa-pen-fancy"></i> พื้นที่เขียนประโยคทดลอง (Sandbox Playground)
+                    </div>
+                    <textarea class="modal-sandbox" id="modal-sandbox" spellcheck="false" placeholder="เขียนย่อหน้าหรือทดลองประโยคยาว ๆ ที่นี่..."></textarea>
+                </div>
+                
+                <!-- Character Map Section -->
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fa-solid fa-table-cells"></i> แผนผังอักขระ (Character Map)
+                    </div>
+                    <div class="glyph-grid" id="glyph-grid"></div>
+                </div>
+                
+                <!-- Technical Metadata Section -->
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fa-solid fa-circle-info"></i> รายละเอียดข้อมูลทางเทคนิค
+                    </div>
+                    <div class="modal-details-grid">
+                        <div class="info-card">
+                            <div class="info-card-label">CSS Font-Family</div>
+                            <div class="info-card-value" id="info-css-name">font-family: 'abyssopelagic';</div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-card-label">แหล่งที่มา / ประเภท</div>
+                            <div class="info-card-value" id="info-source-type">Local / Google Font</div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-card-label">การตรวจสอบสถานะ (Status)</div>
+                            <div class="info-card-value" id="info-status-desc">Active / Loaded</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toasts Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
