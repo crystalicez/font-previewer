@@ -56,7 +56,7 @@
     font-family: 'antro-vectra';
     src: local('Antro Vectra'),
          local('antro-vectra'),
-         local('AntroVera'),
+         local('AntroVectra'),
          url('./fonts/antro_vectra.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
@@ -76,7 +76,9 @@
 
 @font-face {
     font-family: 'citadel-script';
-    src: local('Citadel Script'),
+    src: local('Citadel Script Std'),
+         local('CitadelScriptStd'),
+         local('Citadel Script'),
          local('citadel-script'),
          url('./fonts/citadel_script.ttf') format('truetype'),
          url('./fonts/citadel_script.otf') format('opentype'),
@@ -135,7 +137,8 @@
 
 @font-face {
     font-family: 'chopin-script';
-    src: local('Chopin Script'),
+    src: local('ChopinScript'),
+         local('Chopin Script'),
          local('chopin-script'),
          url('./fonts/chopinscript.otf') format('opentype');
     font-weight: normal;
@@ -154,9 +157,12 @@
 }
 
 @font-face {
-    font-family: 'dymaxian-script';
-    src: local('Dymaxian Script'),
+    font-family: 'dymaxion-script';
+    src: local('DymaxionScript'),
+         local('Dymaxion Script'),
+         local('Dymaxian Script'),
          local('dymaxian-script'),
+         local('dymaxion-script'),
          url('./fonts/dymaxion.ttf') format('truetype'),
          url('./fonts/dymaxion_ttf.ttf') format('truetype');
     font-weight: normal;
@@ -166,7 +172,9 @@
 
 @font-face {
     font-family: 'at-citadel-script';
-    src: local('AT Citadel Script'),
+    src: local('Citadel Script Std'),
+         local('CitadelScriptStd'),
+         local('AT Citadel Script'),
          local('at-citadel-script'),
          local('at citadel script'),
          url('./fonts/at_citadel_script.ttf') format('truetype'),

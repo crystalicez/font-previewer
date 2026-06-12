@@ -23,7 +23,7 @@ const initialFonts = [
     { id: 'chopin-script', name: 'Chopin Script', family: "chopin-script, 'Monsieur La Doulaise', 'Italianno', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'chopin_script.ttf' },
     { id: 'vivaldi-static', name: 'Vivaldi Static', family: "Vivaldi, 'Monsieur La Doulaise', cursive", category: 'System Font', status: 'Active (System)' },
     { id: 'bickham-script-pro', name: 'Bickham Script Pro', family: "bickham-script-pro, 'Monsieur La Doulaise', 'Mrs Saint Delafield', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'bickham_script_pro.ttf' },
-    { id: 'dymaxian-script', name: 'Dymaxian Script', family: "dymaxian-script, 'Pacifico', 'Satisfy', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'dymaxian_script.ttf' },
+    { id: 'dymaxion-script', name: 'Dymaxion Script', family: "dymaxion-script, 'Pacifico', 'Satisfy', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'dymaxion.ttf' },
     { id: 'at-citadel-script', name: 'AT Citadel Script', family: "at-citadel-script, 'Italianno', 'Pinyon Script', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'at_citadel_script.ttf' },
     { id: 'th-charmonman', name: 'TH Charmonman', family: 'Charmonman, cursive', category: 'Google Fonts', status: 'Loaded (CDN)' },
     { id: 'playball', name: 'Playball', family: 'Playball, cursive', category: 'Google Fonts', status: 'Loaded (CDN)' },
