@@ -174,6 +174,39 @@
         </footer>
     </div>
 
+    <!-- Font Loading Warning Modal -->
+    <div class="modal-overlay active" id="warning-modal">
+        <div class="modal-container" style="max-width: 550px;">
+            <div class="modal-body" style="padding: 2.5rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <div class="warning-icon-wrapper" style="font-size: 3.5rem; color: var(--warning); margin-bottom: 1rem; filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.45)); animation: pulse 2s infinite ease-in-out;">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <h2 style="font-size: 1.4rem; font-weight: 700; background: linear-gradient(135deg, var(--text-main), var(--warning)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1.25rem; letter-spacing: -0.01em;">
+                    ข้อควรระวังในการแสดงผลฟอนต์
+                </h2>
+                
+                <div style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; text-align: left; width: 100%; background: rgba(0, 0, 0, 0.25); padding: 1.25rem; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.04); margin-bottom: 1.5rem;">
+                    <p style="margin-bottom: 0.75rem; font-weight: 500; color: var(--text-main);">
+                        การพรีวิวและแสดงผลฟอนต์บนหน้าเว็บอาจมีความคลาดเคลื่อนหรือทำงานผิดพลาด (Fallback) ได้จากหลายสาเหตุ:
+                    </p>
+                    <ul style="padding-left: 1.25rem; margin-bottom: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; list-style-type: disc;">
+                        <li><strong>เว็บบราวเซอร์ (Browser):</strong> แต่ละบราวเซอร์อาจรองรับและประมวลผลไฟล์ฟอนต์แตกต่างกัน</li>
+                        <li><strong>ชื่อฟอนต์ (Font Name):</strong> ชื่อเรียกของฟอนต์ใน CSS หรือโค้ดเว็บบอร์ดไม่ตรงกับชื่อทางเทคนิคที่อยู่ในไฟล์ฟอนต์จริง</li>
+                        <li><strong>ระบบปฏิบัติการ (OS):</strong> ความแตกต่างของฟอนต์ระบบบน Windows, macOS, Linux, iOS หรือ Android</li>
+                    </ul>
+                    <p style="font-weight: 600; color: var(--warning); margin-top: 0.75rem; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-circle-info"></i>
+                        โปรดทำการตรวจสอบความถูกต้อง (Double Check) อีกครั้งก่อนนำไปใช้งานจริง
+                    </p>
+                </div>
+                
+                <button id="btn-close-warning" class="action-btn btn-export" style="width: 100%; padding: 0.85rem; justify-content: center; font-size: 0.95rem; border-radius: 12px; font-weight: 600; cursor: pointer; transition: all var(--transition-fast) !important; background: linear-gradient(135deg, var(--primary), var(--secondary)); border: none; color: white;">
+                    ตกลงและเข้าสู่หน้าเว็บ
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Detailed Font Modal Dialog -->
     <div class="modal-overlay" id="modal-overlay">
         <div class="modal-container">

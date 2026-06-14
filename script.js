@@ -229,6 +229,18 @@ function initApp() {
         if (e.target === modalOverlay) modalOverlay.classList.remove("active");
     });
 
+    // Warning Modal Close
+    const warningModal = document.getElementById("warning-modal");
+    const btnCloseWarning = document.getElementById("btn-close-warning");
+    if (warningModal && btnCloseWarning) {
+        btnCloseWarning.addEventListener("click", () => {
+            warningModal.classList.remove("active");
+        });
+        warningModal.addEventListener("click", (e) => {
+            if (e.target === warningModal) warningModal.classList.remove("active");
+        });
+    }
+
     // Initial renders
     updatePreviewStyles();
     updateThemeStyles();
