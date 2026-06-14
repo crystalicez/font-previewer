@@ -6,7 +6,7 @@
             </div>
         `;return}t.forEach(e=>{const i=document.createElement("div");i.className="font-card",i.dataset.id=e.id;let s="badge-pending";e.status.includes("CDN")?s="badge-google":e.status.includes("System")?s="badge-system":e.status.includes("Local")?s="badge-local":e.status.includes("Uploaded")&&(s="badge-uploaded"),i.innerHTML=`
             <div class="card-header">
-                <div class="card-title-section" onclick="openFontDetails('${e.id}')">
+                <div class="card-title-section" onclick="openFontDetails(this.dataset.id)" data-id="${e.id}">
                     <div class="font-name">
                         ${e.name} 
                         <i class="fa-solid fa-up-right-from-square" style="font-size: 0.75rem; opacity: 0.5;"></i>
@@ -20,14 +20,14 @@
             </div>
             <div class="card-actions">
                 <div class="action-left">
-                    <button class="action-btn" onclick="copyFamily('${e.family}')" title="คัดลอก font-family ไปยังคลิปบอร์ด">
+                    <button class="action-btn" onclick="copyFamily(this.dataset.family)" data-family="${e.family}" title="คัดลอก font-family ไปยังคลิปบอร์ด">
                         <i class="fa-solid fa-code"></i> CSS
                     </button>
-                    <button class="action-btn" onclick="openFontDetails('${e.id}')" title="ดูรายละเอียดฟอนต์และ Character Map">
+                    <button class="action-btn" onclick="openFontDetails(this.dataset.id)" data-id="${e.id}" title="ดูรายละเอียดฟอนต์และ Character Map">
                         <i class="fa-solid fa-font"></i> ข้อมูล
                     </button>
                 </div>
-                <button class="action-btn btn-export" onclick="exportPreview('${e.id}', '${e.family}', '${e.name}')" title="ส่งออกตัวหนังสือเป็นรูปภาพ PNG">
+                <button class="action-btn btn-export" onclick="exportPreview(this.dataset.id, this.dataset.family, this.dataset.name)" data-id="${e.id}" data-family="${e.family}" data-name="${e.name}" title="ส่งออกตัวหนังสือเป็นรูปภาพ PNG">
                     <i class="fa-solid fa-file-image"></i> Export PNG
                 </button>
             </div>

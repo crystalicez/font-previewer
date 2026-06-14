@@ -371,7 +371,7 @@ function renderGrid() {
 
         card.innerHTML = `
             <div class="card-header">
-                <div class="card-title-section" onclick="openFontDetails('${font.id}')">
+                <div class="card-title-section" onclick="openFontDetails(this.dataset.id)" data-id="${font.id}">
                     <div class="font-name">
                         ${font.name} 
                         <i class="fa-solid fa-up-right-from-square" style="font-size: 0.75rem; opacity: 0.5;"></i>
@@ -385,14 +385,14 @@ function renderGrid() {
             </div>
             <div class="card-actions">
                 <div class="action-left">
-                    <button class="action-btn" onclick="copyFamily('${font.family}')" title="คัดลอก font-family ไปยังคลิปบอร์ด">
+                    <button class="action-btn" onclick="copyFamily(this.dataset.family)" data-family="${font.family}" title="คัดลอก font-family ไปยังคลิปบอร์ด">
                         <i class="fa-solid fa-code"></i> CSS
                     </button>
-                    <button class="action-btn" onclick="openFontDetails('${font.id}')" title="ดูรายละเอียดฟอนต์และ Character Map">
+                    <button class="action-btn" onclick="openFontDetails(this.dataset.id)" data-id="${font.id}" title="ดูรายละเอียดฟอนต์และ Character Map">
                         <i class="fa-solid fa-font"></i> ข้อมูล
                     </button>
                 </div>
-                <button class="action-btn btn-export" onclick="exportPreview('${font.id}', '${font.family}', '${font.name}')" title="ส่งออกตัวหนังสือเป็นรูปภาพ PNG">
+                <button class="action-btn btn-export" onclick="exportPreview(this.dataset.id, this.dataset.family, this.dataset.name)" data-id="${font.id}" data-family="${font.family}" data-name="${font.name}" title="ส่งออกตัวหนังสือเป็นรูปภาพ PNG">
                     <i class="fa-solid fa-file-image"></i> Export PNG
                 </button>
             </div>
