@@ -413,6 +413,38 @@ function renderGrid() {
         else if (font.status.includes("Local")) badgeClass = "badge-local";
         else if (font.status.includes("Uploaded")) badgeClass = "badge-uploaded";
 
+        const isPreviewDisabled = font.id === 'vivaldi-static' || font.id === 'edwardian-script';
+        
+        let previewHtml = '';
+        let exportButtonHtml = '';
+        
+        if (isPreviewDisabled) {
+            previewHtml = `
+                <div class="preview-container" style="justify-content: center; align-items: center; background: rgba(239, 68, 68, 0.05); border: 1px dashed rgba(239, 68, 68, 0.15);">
+                    <div style="color: #f87171; font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 500;">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span>ชื่อ font ไม่ตรงกับฐานข้อมูล</span>
+                    </div>
+                </div>
+            `;
+            exportButtonHtml = `
+                <button class="action-btn btn-export" disabled style="opacity: 0.4; cursor: not-allowed;" title="ไม่สามารถส่งออกได้เนื่องจากชื่อฟอนต์ไม่ตรงกับฐานข้อมูล">
+                    <i class="fa-solid fa-file-image"></i> Export PNG
+                </button>
+            `;
+        } else {
+            previewHtml = `
+                <div class="preview-container">
+                    <div class="preview-text" style="font-family: ${font.family};">${previewText}</div>
+                </div>
+            `;
+            exportButtonHtml = `
+                <button class="action-btn btn-export" onclick="exportPreview(this.dataset.id, this.dataset.family, this.dataset.name)" data-id="${font.id}" data-family="${font.family}" data-name="${font.name}" title="ส่งออกตัวหนังสือเป็นรูปภาพ PNG">
+                    <i class="fa-solid fa-file-image"></i> Export PNG
+                </button>
+            `;
+        }
+
         card.innerHTML = `
             <div class="card-header">
                 <div class="card-title-section" onclick="openFontDetails(this.dataset.id)" data-id="${font.id}">
@@ -424,9 +456,7 @@ function renderGrid() {
                 </div>
                 <span class="badge badge-for-${font.id} ${badgeClass}">${font.status}</span>
             </div>
-            <div class="preview-container">
-                <div class="preview-text" style="font-family: ${font.family};">${previewText}</div>
-            </div>
+            ${previewHtml}
             <div class="card-actions">
                 <div class="action-left">
                     <button class="action-btn" onclick="copyFamily(this.dataset.family)" data-family="${font.family}" title="คัดลอก font-family ไปยังคลิปบอร์ด">
@@ -436,9 +466,7 @@ function renderGrid() {
                         <i class="fa-solid fa-font"></i> ข้อมูล
                     </button>
                 </div>
-                <button class="action-btn btn-export" onclick="exportPreview(this.dataset.id, this.dataset.family, this.dataset.name)" data-id="${font.id}" data-family="${font.family}" data-name="${font.name}" title="ส่งออกตัวหนังสือเป็นรูปภาพ PNG">
-                    <i class="fa-solid fa-file-image"></i> Export PNG
-                </button>
+                ${exportButtonHtml}
             </div>
         `;
 
