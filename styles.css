@@ -204,6 +204,88 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'edwardian-script';
+    src: url('./fonts/edwardianscriptitc.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'myriad-pro';
+    src: url('./fonts/MYRIADPRO-REGULAR.OTF') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'helvetica-normal';
+    src: url('./fonts/Helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'centaur';
+    src: url('./fonts/CENTAUR.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'castellar';
+    src: url('./fonts/Castellar.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'courier-new';
+    src: url('./fonts/Courier New.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'vivaldi-static';
+    src: url('./fonts/vivaldi.ttf') format('truetype'),
+         url('./fonts/VIVALDII.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'party-let-plain-1-0';
+    src: url('./fonts/Party LET Plain.woff') format('woff'),
+         url('./fonts/Party LET Plain.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mv-boli';
+    src: url('./fonts/mvboli.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'th-sarabun-psk';
+    src: url('./fonts/THSarabun.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Core Resets */
 * {
     margin: 0;

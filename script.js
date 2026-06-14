@@ -9,26 +9,26 @@ const initialFonts = [
     { id: 'antro-vectra', name: 'Antro Vectra', family: "antro-vectra, 'Mrs Saint Delafield', 'Herr Von Muellerhoff', cursive", category: 'Local', status: 'Checking...', file: 'antro_vectra.ttf' },
     { id: 'bridget-script', name: 'Bridget Script', family: "bridget-script, 'Great Vibes', 'Sacramento', cursive", category: 'Local', status: 'Checking...', file: 'bridget_script.ttf' },
     { id: 'citadel-script', name: 'Citadel Script', family: "citadel-script, 'Italianno', 'Allura', cursive", category: 'Local', status: 'Checking...', file: 'citadel_script.ttf' },
-    { id: 'edwardian-script', name: 'Edwardian Script', family: "'Edwardian Script ITC', 'Edwardian Script', 'Monsieur La Doulaise', cursive", category: 'System Font', status: 'Checking...' },
-    { id: 'myriad-pro', name: 'Myriad Pro', family: "'Myriad Pro', 'Helvetica Neue', Helvetica, sans-serif", category: 'System Font', status: 'Checking...' },
+    { id: 'edwardian-script', name: 'Edwardian Script', family: "edwardian-script, 'Edwardian Script ITC', 'Edwardian Script', 'Monsieur La Doulaise', cursive", category: 'Local', status: 'Checking...', file: 'edwardianscriptitc.ttf' },
+    { id: 'myriad-pro', name: 'Myriad Pro', family: "myriad-pro, 'Myriad Pro', 'Helvetica Neue', Helvetica, sans-serif", category: 'Local', status: 'Checking...', file: 'MYRIADPRO-REGULAR.OTF' },
     { id: 'black-label-light', name: 'Black Label Light', family: "black-label-light, 'Oswald', 'League Gothic', sans-serif", category: 'Local', status: 'Checking...', file: 'black_label_light.ttf' },
     { id: 'code-saver-regular', name: 'Code Saver Regular', family: "code-saver-regular, 'Source Code Pro', 'Courier New', monospace", category: 'Local', status: 'Checking...', file: 'code_saver_regular.ttf' },
-    { id: 'helvetica-normal', name: 'Helvetica Normal', family: "'Helvetica Neue', Helvetica, Arial, sans-serif", category: 'System Font', status: 'Checking...' },
-    { id: 'th-sarabun-psk', name: 'TH Sarabun PSK', family: "'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif", category: 'System / Google Font', status: 'Checking...' },
-    { id: 'centaur', name: 'Centaur', family: "Centaur, 'Forum', serif", category: 'System Font', status: 'Checking...' },
-    { id: 'castellar', name: 'Castellar', family: "Castellar, 'Cinzel', serif", category: 'System Font', status: 'Checking...' },
-    { id: 'courier-new', name: 'Courier New', family: "'Courier New', Courier, monospace", category: 'System Font', status: 'Checking...' },
+    { id: 'helvetica-normal', name: 'Helvetica Normal', family: "helvetica-normal, Helvetica, 'Helvetica Neue', Arial, sans-serif", category: 'Local', status: 'Checking...', file: 'Helvetica.ttf' },
+    { id: 'th-sarabun-psk', name: 'TH Sarabun PSK', family: "th-sarabun-psk, 'TH SarabunPSK', 'THSarabunPSK', 'Sarabun', sans-serif", category: 'Local', status: 'Checking...', file: 'THSarabun.ttf' },
+    { id: 'centaur', name: 'Centaur', family: "centaur, Centaur, 'Forum', serif", category: 'Local', status: 'Checking...', file: 'CENTAUR.TTF' },
+    { id: 'castellar', name: 'Castellar', family: "castellar, Castellar, 'Cinzel', serif", category: 'Local', status: 'Checking...', file: 'Castellar.ttf' },
+    { id: 'courier-new', name: 'Courier New', family: "courier-new, 'Courier New', Courier, monospace", category: 'Local', status: 'Checking...', file: 'Courier New.ttf' },
     { id: 'winter-calligraphy', name: 'Winter Calligraphy', family: "winter-calligraphy, 'Alex Brush', 'Great Vibes', cursive", category: 'Local', status: 'Checking...', file: 'winter_calligraphy.ttf' },
     { id: 'valentine-love', name: 'Valentine Love', family: "valentine-love, 'Sacramento', 'Rochester', cursive", category: 'Local', status: 'Checking...', file: 'valentine_love.ttf' },
     { id: 'chopin-script', name: 'Chopin Script', family: "chopin-script, 'Monsieur La Doulaise', 'Italianno', cursive", category: 'Local', status: 'Checking...', file: 'chopin_script.ttf' },
-    { id: 'vivaldi-static', name: 'Vivaldi Static', family: "Vivaldi, 'Monsieur La Doulaise', cursive", category: 'System Font', status: 'Checking...' },
+    { id: 'vivaldi-static', name: 'Vivaldi Static', family: "vivaldi-static, Vivaldi, 'Monsieur La Doulaise', cursive", category: 'Local', status: 'Checking...', file: 'vivaldi.ttf' },
     { id: 'bickham-script-pro', name: 'Bickham Script Pro', family: "bickham-script-pro, 'Monsieur La Doulaise', 'Mrs Saint Delafield', cursive", category: 'Local', status: 'Checking...', file: 'bickham_script_pro.ttf' },
     { id: 'dymaxion-script', name: 'Dymaxion Script', family: "dymaxion-script, 'Pacifico', 'Satisfy', cursive", category: 'Local', status: 'Checking...', file: 'dymaxion.ttf' },
     { id: 'at-citadel-script', name: 'AT Citadel Script', family: "at-citadel-script, 'Italianno', 'Pinyon Script', cursive", category: 'Local', status: 'Checking...', file: 'at_citadel_script.ttf' },
     { id: 'th-charmonman', name: 'TH Charmonman', family: 'Charmonman, cursive', category: 'Google Fonts', status: 'Checking...' },
     { id: 'playball', name: 'Playball', family: 'Playball, cursive', category: 'Google Fonts', status: 'Checking...' },
-    { id: 'party-let-plain-1-0', name: 'Party Let Plain 1.0', family: "'Party LET', 'PartyLetPlain', 'Satisfy', cursive", category: 'System Font', status: 'Checking...' },
-    { id: 'mv-boli', name: 'MV Boli', family: "'MV Boli', 'Satisfy', cursive", category: 'System Font', status: 'Checking...' },
+    { id: 'party-let-plain-1-0', name: 'Party Let Plain 1.0', family: "party-let-plain-1-0, 'Party LET', 'Party LET Plain', 'Satisfy', cursive", category: 'Local', status: 'Checking...', file: 'Party LET Plain.ttf' },
+    { id: 'mv-boli', name: 'MV Boli', family: "mv-boli, 'MV Boli', 'Satisfy', cursive", category: 'Local', status: 'Checking...', file: 'mvboli.ttf' },
     { id: 'blacksword', name: 'Blacksword', family: "blacksword, 'Zeyada', 'Reenie Beanie', cursive", category: 'Local', status: 'Checking...', file: 'blacksword.otf' },
     { id: 'abbeyline', name: 'Abbeyline', family: "abbeyline, 'Forum', 'Cinzel', serif", category: 'Local', status: 'Checking...', file: 'abbeyline.ttf' }
 ];
@@ -413,38 +413,6 @@ function renderGrid() {
         else if (font.status.includes("Local")) badgeClass = "badge-local";
         else if (font.status.includes("Uploaded")) badgeClass = "badge-uploaded";
 
-        const isPreviewDisabled = font.id === 'vivaldi-static' || font.id === 'edwardian-script';
-        
-        let previewHtml = '';
-        let exportButtonHtml = '';
-        
-        if (isPreviewDisabled) {
-            previewHtml = `
-                <div class="preview-container" style="justify-content: center; align-items: center; background: rgba(239, 68, 68, 0.05); border: 1px dashed rgba(239, 68, 68, 0.15);">
-                    <div style="color: #f87171; font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 500;">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                        <span>ชื่อ font ไม่ตรงกับฐานข้อมูล</span>
-                    </div>
-                </div>
-            `;
-            exportButtonHtml = `
-                <button class="action-btn btn-export" disabled style="opacity: 0.4; cursor: not-allowed;" title="ไม่สามารถส่งออกได้เนื่องจากชื่อฟอนต์ไม่ตรงกับฐานข้อมูล">
-                    <i class="fa-solid fa-file-image"></i> Export PNG
-                </button>
-            `;
-        } else {
-            previewHtml = `
-                <div class="preview-container">
-                    <div class="preview-text" style="font-family: ${font.family};">${previewText}</div>
-                </div>
-            `;
-            exportButtonHtml = `
-                <button class="action-btn btn-export" onclick="exportPreview(this.dataset.id, this.dataset.family, this.dataset.name)" data-id="${font.id}" data-family="${font.family}" data-name="${font.name}" title="ส่งออกตัวหนังสือเป็นรูปภาพ PNG">
-                    <i class="fa-solid fa-file-image"></i> Export PNG
-                </button>
-            `;
-        }
-
         card.innerHTML = `
             <div class="card-header">
                 <div class="card-title-section" onclick="openFontDetails(this.dataset.id)" data-id="${font.id}">
@@ -456,7 +424,9 @@ function renderGrid() {
                 </div>
                 <span class="badge badge-for-${font.id} ${badgeClass}">${font.status}</span>
             </div>
-            ${previewHtml}
+            <div class="preview-container">
+                <div class="preview-text" style="font-family: ${font.family};">${previewText}</div>
+            </div>
             <div class="card-actions">
                 <div class="action-left">
                     <button class="action-btn" onclick="copyFamily(this.dataset.family)" data-family="${font.family}" title="คัดลอก font-family ไปยังคลิปบอร์ด">
@@ -466,7 +436,9 @@ function renderGrid() {
                         <i class="fa-solid fa-font"></i> ข้อมูล
                     </button>
                 </div>
-                ${exportButtonHtml}
+                <button class="action-btn btn-export" onclick="exportPreview(this.dataset.id, this.dataset.family, this.dataset.name)" data-id="${font.id}" data-family="${font.family}" data-name="${font.name}" title="ส่งออกตัวหนังสือเป็นรูปภาพ PNG">
+                    <i class="fa-solid fa-file-image"></i> Export PNG
+                </button>
             </div>
         `;
 
