@@ -158,13 +158,10 @@
 
 @font-face {
     font-family: 'dymaxion-script';
-    src: local('DymaxionScript'),
-         local('Dymaxion Script'),
-         local('Dymaxian Script'),
-         local('dymaxian-script'),
-         local('dymaxion-script'),
+    src: url('./fonts/dymaxion.woff') format('woff'),
          url('./fonts/dymaxion.ttf') format('truetype'),
-         url('./fonts/dymaxion_ttf.ttf') format('truetype');
+         local('DymaxionScript'),
+         local('Dymaxion Script');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
