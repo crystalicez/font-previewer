@@ -37,7 +37,7 @@ let fonts = [...initialFonts];
 
 // 2. State Variables
 const defaults = {
-    previewText: "สะพานพระราม 8 ABC 123",
+    previewText: "AbBcCcDdEeFfGg 123456 _-*/",
     fontSize: 32,
     letterSpacing: 0,
     isBold: false,
