@@ -2,35 +2,35 @@
 
 // 1. Font Definitions Sourced from User's List
 const initialFonts = [
-    { id: 'abyssopelagic', name: 'Abyssopelagic', family: "abyssopelagic, 'Syncopate', 'Montserrat', sans-serif", category: 'Local', status: 'Loaded (Fallback)', file: 'abyssopelagic.otf' },
-    { id: 'athiti', name: 'Athiti', family: 'Athiti, sans-serif', category: 'Google Fonts', status: 'Loaded (CDN)' },
-    { id: 'alex-brush', name: 'Alex Brush', family: "'Alex Brush', cursive", category: 'Google Fonts', status: 'Loaded (CDN)' },
-    { id: 'allura', name: 'Allura', family: 'Allura, cursive', category: 'Google Fonts', status: 'Loaded (CDN)' },
-    { id: 'antro-vectra', name: 'Antro Vectra', family: "antro-vectra, 'Mrs Saint Delafield', 'Herr Von Muellerhoff', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'antro_vectra.ttf' },
-    { id: 'bridget-script', name: 'Bridget Script', family: "bridget-script, 'Great Vibes', 'Sacramento', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'bridget_script.ttf' },
-    { id: 'citadel-script', name: 'Citadel Script', family: "citadel-script, 'Italianno', 'Allura', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'citadel_script.ttf' },
-    { id: 'edwardian-script', name: 'Edwardian Script', family: "'Edwardian Script ITC', 'Edwardian Script', 'Monsieur La Doulaise', cursive", category: 'System Font', status: 'Active (System)' },
-    { id: 'myriad-pro', name: 'Myriad Pro', family: "'Myriad Pro', 'Helvetica Neue', Helvetica, sans-serif", category: 'System Font', status: 'Active (System)' },
-    { id: 'black-label-light', name: 'Black Label Light', family: "black-label-light, 'Oswald', 'League Gothic', sans-serif", category: 'Local', status: 'Loaded (Fallback)', file: 'black_label_light.ttf' },
-    { id: 'code-saver-regular', name: 'Code Saver Regular', family: "code-saver-regular, 'Source Code Pro', 'Courier New', monospace", category: 'Local', status: 'Loaded (Fallback)', file: 'code_saver_regular.ttf' },
-    { id: 'helvetica-normal', name: 'Helvetica Normal', family: "'Helvetica Neue', Helvetica, Arial, sans-serif", category: 'System Font', status: 'Active (System)' },
-    { id: 'th-sarabun-psk', name: 'TH Sarabun PSK', family: "'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif", category: 'System / Google Font', status: 'Active (System/Google)' },
-    { id: 'centaur', name: 'Centaur', family: "Centaur, 'Forum', serif", category: 'System Font', status: 'Active (System)' },
-    { id: 'castellar', name: 'Castellar', family: "Castellar, 'Cinzel', serif", category: 'System Font', status: 'Active (System)' },
-    { id: 'courier-new', name: 'Courier New', family: "'Courier New', Courier, monospace", category: 'System Font', status: 'Active (System)' },
-    { id: 'winter-calligraphy', name: 'Winter Calligraphy', family: "winter-calligraphy, 'Alex Brush', 'Great Vibes', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'winter_calligraphy.ttf' },
-    { id: 'valentine-love', name: 'Valentine Love', family: "valentine-love, 'Sacramento', 'Rochester', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'valentine_love.ttf' },
-    { id: 'chopin-script', name: 'Chopin Script', family: "chopin-script, 'Monsieur La Doulaise', 'Italianno', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'chopin_script.ttf' },
-    { id: 'vivaldi-static', name: 'Vivaldi Static', family: "Vivaldi, 'Monsieur La Doulaise', cursive", category: 'System Font', status: 'Active (System)' },
-    { id: 'bickham-script-pro', name: 'Bickham Script Pro', family: "bickham-script-pro, 'Monsieur La Doulaise', 'Mrs Saint Delafield', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'bickham_script_pro.ttf' },
-    { id: 'dymaxion-script', name: 'Dymaxion Script', family: "dymaxion-script, 'Pacifico', 'Satisfy', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'dymaxion.ttf' },
-    { id: 'at-citadel-script', name: 'AT Citadel Script', family: "at-citadel-script, 'Italianno', 'Pinyon Script', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'at_citadel_script.ttf' },
-    { id: 'th-charmonman', name: 'TH Charmonman', family: 'Charmonman, cursive', category: 'Google Fonts', status: 'Loaded (CDN)' },
-    { id: 'playball', name: 'Playball', family: 'Playball, cursive', category: 'Google Fonts', status: 'Loaded (CDN)' },
-    { id: 'party-let-plain-1-0', name: 'Party Let Plain 1.0', family: "'Party LET', 'PartyLetPlain', 'Satisfy', cursive", category: 'System Font', status: 'Active (System)' },
-    { id: 'mv-boli', name: 'MV Boli', family: "'MV Boli', 'Satisfy', cursive", category: 'System Font', status: 'Active (System)' },
-    { id: 'blacksword', name: 'Blacksword', family: "blacksword, 'Zeyada', 'Reenie Beanie', cursive", category: 'Local', status: 'Loaded (Fallback)', file: 'blacksword.otf' },
-    { id: 'abbeyline', name: 'Abbeyline', family: "abbeyline, 'Forum', 'Cinzel', serif", category: 'Local', status: 'Loaded (Fallback)', file: 'abbeyline.ttf' }
+    { id: 'abyssopelagic', name: 'Abyssopelagic', family: "abyssopelagic, 'Syncopate', 'Montserrat', sans-serif", category: 'Local', status: 'Checking...', file: 'abyssopelagic.otf' },
+    { id: 'athiti', name: 'Athiti', family: 'Athiti, sans-serif', category: 'Google Fonts', status: 'Checking...' },
+    { id: 'alex-brush', name: 'Alex Brush', family: "'Alex Brush', cursive", category: 'Google Fonts', status: 'Checking...' },
+    { id: 'allura', name: 'Allura', family: 'Allura, cursive', category: 'Google Fonts', status: 'Checking...' },
+    { id: 'antro-vectra', name: 'Antro Vectra', family: "antro-vectra, 'Mrs Saint Delafield', 'Herr Von Muellerhoff', cursive", category: 'Local', status: 'Checking...', file: 'antro_vectra.ttf' },
+    { id: 'bridget-script', name: 'Bridget Script', family: "bridget-script, 'Great Vibes', 'Sacramento', cursive", category: 'Local', status: 'Checking...', file: 'bridget_script.ttf' },
+    { id: 'citadel-script', name: 'Citadel Script', family: "citadel-script, 'Italianno', 'Allura', cursive", category: 'Local', status: 'Checking...', file: 'citadel_script.ttf' },
+    { id: 'edwardian-script', name: 'Edwardian Script', family: "'Edwardian Script ITC', 'Edwardian Script', 'Monsieur La Doulaise', cursive", category: 'System Font', status: 'Checking...' },
+    { id: 'myriad-pro', name: 'Myriad Pro', family: "'Myriad Pro', 'Helvetica Neue', Helvetica, sans-serif", category: 'System Font', status: 'Checking...' },
+    { id: 'black-label-light', name: 'Black Label Light', family: "black-label-light, 'Oswald', 'League Gothic', sans-serif", category: 'Local', status: 'Checking...', file: 'black_label_light.ttf' },
+    { id: 'code-saver-regular', name: 'Code Saver Regular', family: "code-saver-regular, 'Source Code Pro', 'Courier New', monospace", category: 'Local', status: 'Checking...', file: 'code_saver_regular.ttf' },
+    { id: 'helvetica-normal', name: 'Helvetica Normal', family: "'Helvetica Neue', Helvetica, Arial, sans-serif", category: 'System Font', status: 'Checking...' },
+    { id: 'th-sarabun-psk', name: 'TH Sarabun PSK', family: "'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif", category: 'System / Google Font', status: 'Checking...' },
+    { id: 'centaur', name: 'Centaur', family: "Centaur, 'Forum', serif", category: 'System Font', status: 'Checking...' },
+    { id: 'castellar', name: 'Castellar', family: "Castellar, 'Cinzel', serif", category: 'System Font', status: 'Checking...' },
+    { id: 'courier-new', name: 'Courier New', family: "'Courier New', Courier, monospace", category: 'System Font', status: 'Checking...' },
+    { id: 'winter-calligraphy', name: 'Winter Calligraphy', family: "winter-calligraphy, 'Alex Brush', 'Great Vibes', cursive", category: 'Local', status: 'Checking...', file: 'winter_calligraphy.ttf' },
+    { id: 'valentine-love', name: 'Valentine Love', family: "valentine-love, 'Sacramento', 'Rochester', cursive", category: 'Local', status: 'Checking...', file: 'valentine_love.ttf' },
+    { id: 'chopin-script', name: 'Chopin Script', family: "chopin-script, 'Monsieur La Doulaise', 'Italianno', cursive", category: 'Local', status: 'Checking...', file: 'chopin_script.ttf' },
+    { id: 'vivaldi-static', name: 'Vivaldi Static', family: "Vivaldi, 'Monsieur La Doulaise', cursive", category: 'System Font', status: 'Checking...' },
+    { id: 'bickham-script-pro', name: 'Bickham Script Pro', family: "bickham-script-pro, 'Monsieur La Doulaise', 'Mrs Saint Delafield', cursive", category: 'Local', status: 'Checking...', file: 'bickham_script_pro.ttf' },
+    { id: 'dymaxion-script', name: 'Dymaxion Script', family: "dymaxion-script, 'Pacifico', 'Satisfy', cursive", category: 'Local', status: 'Checking...', file: 'dymaxion.ttf' },
+    { id: 'at-citadel-script', name: 'AT Citadel Script', family: "at-citadel-script, 'Italianno', 'Pinyon Script', cursive", category: 'Local', status: 'Checking...', file: 'at_citadel_script.ttf' },
+    { id: 'th-charmonman', name: 'TH Charmonman', family: 'Charmonman, cursive', category: 'Google Fonts', status: 'Checking...' },
+    { id: 'playball', name: 'Playball', family: 'Playball, cursive', category: 'Google Fonts', status: 'Checking...' },
+    { id: 'party-let-plain-1-0', name: 'Party Let Plain 1.0', family: "'Party LET', 'PartyLetPlain', 'Satisfy', cursive", category: 'System Font', status: 'Checking...' },
+    { id: 'mv-boli', name: 'MV Boli', family: "'MV Boli', 'Satisfy', cursive", category: 'System Font', status: 'Checking...' },
+    { id: 'blacksword', name: 'Blacksword', family: "blacksword, 'Zeyada', 'Reenie Beanie', cursive", category: 'Local', status: 'Checking...', file: 'blacksword.otf' },
+    { id: 'abbeyline', name: 'Abbeyline', family: "abbeyline, 'Forum', 'Cinzel', serif", category: 'Local', status: 'Checking...', file: 'abbeyline.ttf' }
 ];
 
 let fonts = [...initialFonts];
@@ -100,7 +100,7 @@ const infoStatusDesc = document.getElementById("info-status-desc");
 // 4. Initialization
 window.addEventListener("DOMContentLoaded", () => {
     initApp();
-    checkLocalFontsStatus();
+    checkAllFontsStatus();
 });
 
 function initApp() {
@@ -294,36 +294,80 @@ function resetControls() {
 }
 
 // 6. Font Files check
-function checkLocalFontsStatus() {
+function checkAllFontsStatus() {
     fonts.forEach(font => {
-        if (font.category === 'Local') {
-            const specificFamily = font.id; // abyssopelagic, antro-vectra, etc.
+        const primaryFamily = font.family.split(',')[0].trim().replace(/^['"]|['"]$/g, '');
+        
+        const checkAvailability = () => {
+            if (document.fonts.check(`12px "${primaryFamily}"`, 'a')) {
+                return true;
+            }
             
-            document.fonts.load(`12px ${specificFamily}`, 'a').then(() => {
-                const isLoaded = () => {
-                    if (document.fonts.check(`12px ${specificFamily}`, 'a')) {
-                        return true;
-                    }
-                    const faces = Array.from(document.fonts).filter(face => {
-                        const normalizedFace = face.family.replace(/['"]/g, '').toLowerCase();
-                        const normalizedSpec = specificFamily.toLowerCase();
-                        return normalizedFace === normalizedSpec;
-                    });
-                    return faces.length > 0 && faces.some(face => face.status === 'loaded');
-                };
-
-                if (isLoaded()) {
-                    font.status = 'Loaded (Local)';
-                    updateCardBadge(font.id, 'Loaded (Local)', 'badge-local');
-                } else {
-                    font.status = 'Loaded (Fallback)';
-                    updateCardBadge(font.id, 'Loaded (Fallback)', 'badge-google');
+            const faces = Array.from(document.fonts).filter(face => {
+                const normalizedFace = face.family.replace(/['"]/g, '').toLowerCase();
+                const normalizedSpec = primaryFamily.toLowerCase();
+                return normalizedFace === normalizedSpec;
+            });
+            if (faces.length > 0 && faces.some(face => face.status === 'loaded')) {
+                return true;
+            }
+            
+            try {
+                const testString = "abcdefghijklmnopqrstuvwxyz0123456789";
+                const canvas = document.createElement("canvas");
+                const ctx = canvas.getContext("2d");
+                
+                ctx.font = "72px sans-serif";
+                const widthSansSerif = ctx.measureText(testString).width;
+                
+                ctx.font = "72px monospace";
+                const widthMonospace = ctx.measureText(testString).width;
+                
+                ctx.font = `72px "${primaryFamily}", sans-serif`;
+                const widthSansFallback = ctx.measureText(testString).width;
+                
+                ctx.font = `72px "${primaryFamily}", monospace`;
+                const widthMonoFallback = ctx.measureText(testString).width;
+                
+                if (widthSansFallback !== widthSansSerif || widthMonoFallback !== widthMonospace) {
+                    return true;
                 }
-            }).catch(() => {
+            } catch (e) {
+                console.error("Canvas check failed:", e);
+            }
+            
+            return false;
+        };
+
+        document.fonts.load(`12px "${primaryFamily}"`, 'a').then(() => {
+            if (checkAvailability()) {
+                let statusText = 'Active (System)';
+                let badgeClass = 'badge-system';
+                
+                if (font.category === 'Local') {
+                    statusText = 'Loaded (Local)';
+                    badgeClass = 'badge-local';
+                } else if (font.category === 'Google Fonts') {
+                    statusText = 'Loaded (CDN)';
+                    badgeClass = 'badge-google';
+                } else if (font.category === 'System / Google Font') {
+                    statusText = 'Active (System/Google)';
+                    badgeClass = 'badge-system';
+                } else if (font.category === 'Uploaded' || font.category === 'Uploaded Custom') {
+                    statusText = 'Loaded (Uploaded)';
+                    badgeClass = 'badge-uploaded';
+                }
+                
+                font.status = statusText;
+                updateCardBadge(font.id, statusText, badgeClass);
+            } else {
                 font.status = 'Loaded (Fallback)';
                 updateCardBadge(font.id, 'Loaded (Fallback)', 'badge-google');
-            });
-        }
+            }
+        }).catch(() => {
+            font.status = 'Loaded (Fallback)';
+            updateCardBadge(font.id, 'Loaded (Fallback)', 'badge-google');
+        });
     });
 }
 
